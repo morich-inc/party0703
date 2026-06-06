@@ -22,7 +22,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* ドイツの街並みイメージ */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             height: 400px;
@@ -106,9 +106,59 @@
         .payment-box {
             background-color: #fffaf0;
             border: 1px dashed var(--accent-color);
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             margin-top: 20px;
+        }
+
+        .payment-highlight {
+            background-color: #fff3e0;
+            border: 2px solid var(--accent-color);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .payment-highlight .payment-link {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            padding: 12px 30px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50px;
+            transition: all 0.2s;
+        }
+
+        .payment-highlight .payment-link:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .qr-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .qr-section img {
+            width: 140px;
+            height: 140px;
+            border: 3px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 5px;
+            background: white;
+        }
+
+        .qr-description {
+            text-align: left;
+            max-width: 280px;
         }
 
         .footer {
@@ -123,6 +173,8 @@
             .container { margin-top: -20px; padding: 20px; }
             .info-table th, .info-table td { display: block; width: 100%; }
             .info-table th { background-color: transparent; padding-bottom: 0; }
+            .qr-section { flex-direction: column; align-items: center; }
+            .qr-description { text-align: center; }
         }
     </style>
 </head>
@@ -157,48 +209,55 @@
                 </td>
             </tr>
             <tr>
-    <th>会費</th>
-    <td>
-        10,000円<br>
-        <small>※1次会のみ</small><br>
-        <small>※2次会は各自その場のノリで・・</small>
-    </td>
-</tr>
+                <th>会費</th>
+                <td>
+                    10,000円<br>
+                    <small>※1次会のみ</small><br>
+                    <small>※2次会は各自その場のノリで・・</small>
+                </td>
+            </tr>
             <tr>
-    <th>対象</th>
-    <td>藤本真紀子がエージェント在職中にご縁のあった皆さま</td>
-</tr>
-<tr>
-    <th>幹事</th>
-    <td>
-        森本（もりち）、林（もとこ）、土井（どいかな）、阪根（かりん）<br>
-        <small>緊急時連絡先：もりち 080-4366-8640</small>
-    </td>
-</tr>
+                <th>対象</th>
+                <td>藤本真紀子がエージェント在職中にご縁のあった皆さま</td>
+            </tr>
+            <tr>
+                <th>幹事</th>
+                <td>
+                    森本（もりち）、林（もとこ）、土井（どいかな）、阪根（かりん）<br>
+                    <small>緊急時連絡先：もりち 080-4366-8640</small>
+                </td>
+            </tr>
         </table>
 
         <div class="btn-container">
-            <p style="color: #e74c3c; font-weight: bold;">回答期限：6月10日まで</p>
+            <p style="color: #e74c3c; font-weight: bold;">回答＆お支払い期限：6月15日まで</p>
             <a href="https://forms.gle/v9HUmEZo7FCHjnEQ7" class="btn" target="_blank">Googleフォームで出欠回答</a>
         </div>
 
-        <h2>お支払い・キャンセルについて</h2>
-        <div class="payment-box">
-            <p><strong>【事前集金制】</strong></p>
-            <p><strong>■PayPay銀行（0033）</strong><br>
-            ビジネス営業部支店（005） 普通 2860571<br>
-            ｶ）ﾓﾘﾁﾄ</p>
-            <hr>
-            <p><strong>■PayPay</strong><br>
-            ID: happymorich0303<br>
-            電話番号: 080-4366-8640 (もりち宛て)</p>
-            <p><small>※領収書（株式会社morich-To）が必要な方はGoogleフォームより宛名をお知らせください。</small></p>
+        <h2>お支払いについて</h2>
+
+        <div class="payment-highlight">
+            <p style="margin:0 0 8px; font-size:1rem; font-weight:bold;">💳 Square決済（クレジットカード・各種キャッシュレス対応）</p>
+            <p style="margin:0 0 15px; color:#666; font-size:0.95rem;">下記URLまたはQRコードからお支払いいただけます</p>
+
+            <a href="https://square.link/u/IiOCSlA9" class="payment-link" target="_blank">
+                💳 こちらからお支払い
+            </a>
+
+            <div class="qr-section">
+                <img src="data:image/jpeg;base64,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" alt="Square決済QRコード" />
+                <div class="qr-description">
+                    <p style="margin:0; font-size:0.95rem;"><strong>QRコードを読み取って決済</strong></p>
+                    <p style="margin:5px 0 0; font-size:0.85rem; color:#666;">スマートフォンのカメラでQRコードを読み取り、そのままお支払いいただけます。</p>
+                </div>
+            </div>
         </div>
 
-        <h3 style="margin-top:20px;">キャンセルポリシー</h3>
+        <h3 style="margin-top:30px;">キャンセルポリシー</h3>
         <ul>
-            <li>6月30日まで：キャンセル無料</li>
-            <li>7月1日以降：100％</li>
+            <li><strong>6月15日まで</strong>：回答＆お支払い期限</li>
+            <li><strong>6月16日以降</strong>：キャンセル料 50%</li>
+            <li><strong>7月1日以降</strong>：キャンセル料 100%</li>
         </ul>
 
         <div class="intro" style="border-bottom: none; margin-top: 40px;">
@@ -208,7 +267,7 @@
     </div>
 
     <div class="footer">
-        © 2024 Maki's Farewell Party Executive Committee
+        © 2025 Maki's Farewell Party Executive Committee
     </div>
 
 </body>
